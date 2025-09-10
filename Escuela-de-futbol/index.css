@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'roboto',sans-serif;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover{ background-color: rgb(0, 50, 0);}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{ background-color:rgb(248, 251, 255) ;}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    gap: 25px 0px;
+}
+
+header .logo{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkgreen;
+    
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 15px;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{color:rgb(0, 92, 0);}
+
+#hero{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    )
+    ,url(images/hero.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    gap: 50px;
+}
+
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.7em;
+}
+
+#quienes-somos .container{
+    margin: 150px 20px;
+}
+
+#quienes-somos .texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#quienes-somos h2{   
+    font-size: 2.1em;
+}
+
+#nuestros-cursos{
+    background-color: black;
+}
+
+#nuestros-cursos .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+#nuestros-cursos p{
+    display: none;
+}
+
+#nuestros-cursos h2{ 
+    color: white;
+    padding-bottom: 50px;
+}
+
+#nuestros-cursos h3{ 
+    color: white;
+    margin-bottom: 15px;
+}
+
+#nuestros-cursos .carta{
+    background-position: center;
+    background-size: cover;
+    padding: 50px 20px;
+    border-radius: 10px;
+    border: 4px;
+    margin: 25px 0px;
+}
+
+
+#nuestros-cursos button{
+    margin-top: 15px;
+}
+
+.carta:first-child{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    )
+    ,url(images/carta-dt.jpg);
+}
+
+.carta:nth-child(2) {
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    )
+    ,url(images/carta-preparadorFisico.jpg);
+}
+
+.carta:nth-child(3) {
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    )
+    ,url(images/carta-arbitraje.webp);
+}
+
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 150px 10px;
+}
+
+#caracteristicas ul{
+    font-weight: bold;
+}
+
+#caracteristicas li{
+    font-size: 1em;
+    margin: 10px 0px;
+}
+
+#final {
+    background-color: black;
+}
+
+#final .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 70vh;
+    text-align: center;
+}
+
+#final h1{
+    font-size: 10vw;
+    color: white;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p{
+    color: rgb(105, 105, 105);
+    font-size: 1em;
+    margin-bottom: 7px;
+}
+
+@media (min-width: 720px){
+
+    header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+    
+    header .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: row; 
+    }
+
+    header .logo{
+        font-size: 1.25em;
+    }
+
+    header a{
+        font-size: 0.85em;
+    }
+
+    #hero h1{
+        font-size: 4.5em;
+    }
+
+    #hero button{
+        font-size: 2em;
+    }
+
+    #quienes-somos{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        max-width: 1000px;
+    }
+
+    #quienes-somos .img-container{
+        display: block;
+        background-image: url(images/quienes-somos.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 250px;
+    }
+
+    #quienes-somos h2{   
+        font-size: 2em;   
+    }
+
+    #quienes-somos .texto{
+        width: 50%;
+        max-width: 650px;
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    #nuestros-cursos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nuestros-cursos .container-cartas{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        max-width: 1000px;
+    }
+
+    #nuestros-cursos .carta{
+        min-width: 200px;
+    }
+
+    #nuestros-cursos h3{ 
+        color: white;
+        text-align: center;
+        height: 75px;
+    }
+    #nuestros-cursos p{
+        display: block;
+        color: white;
+    }
+
+    #nuestros-cursos button{
+        margin-top: 35px;
+    }
+
+    #caracteristicas .img-container{
+        background-image: url(images/img-container.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 350px;
+
+    }
+
+    #caracteristicas .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        max-width: 900px;
+    }
+
+    #caracteristicas .lista{
+        text-align: initial;
+    }
+
+    #final h1{
+        font-size: 4.5em;
+    }
+
+    #final button{
+        font-size: 2.3em;
+    }
+
+    footer .container{
+        justify-content:end;
+        margin-right: 10px;
+    }
+}
