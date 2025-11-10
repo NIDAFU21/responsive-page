@@ -1,0 +1,251 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-size: 3em;
+    -webkit-text-stroke: 1.5px black;
+}
+h2{
+    color: #912525;
+    font-size: 2em;
+}
+h3{font-size: 1.2em;}
+p{
+    color: rgb(78, 78, 78);
+    font-size: 0.8em;
+}
+
+button{
+    font-size: 1em;
+    color: white;
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:hover{
+    background-color: rgb(196, 131, 12);
+}
+
+.container{
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.pedido{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.descripcion{
+    width: 65%;
+}
+
+.monto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carta{
+    display: block;
+    border-radius: 15px;
+    border: 2px solid rgba(169, 169, 169, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 30px;
+    width: 300px;
+}
+
+.img-carta{
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 250px;
+    display: block;
+}
+
+.container-cartas{
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-pedidos{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1{
+    font-size: 2em;
+    padding: 20px;
+}
+
+header .container-header{
+    text-align: center;
+}
+
+header {
+    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: repeating-linear-gradient(
+        to right, 
+        #a13232,
+        #a13232 20px,
+        #6e2828 20px,
+        #6e2828 40px
+    );
+}
+
+header nav{
+    background-color: rgb(0, 147, 167);
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    padding: 3px;
+}
+
+
+header a{
+    color:white;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 0px 20px;
+    border-bottom: 3px solid transparent; 
+    transition: border-color 0.3s;
+}
+
+header a.active {
+  border-bottom: 3px solid #bd770e; 
+}
+
+#tradicionales .carta:nth-child(1) .img-carta{
+    background-image: url(images/jamon-queso.jpg);
+}
+
+#tradicionales .carta:nth-child(2) .img-carta{
+    background-image: url(images/cuatro-estaciones.jpg);
+}
+
+#tradicionales .carta:nth-child(3) .img-carta{
+    background-image: url(images/hawaiana.jpg);
+}
+
+#tradicionales .carta:nth-child(4) .img-carta{
+    background-image: url(images/vegetariana.jpg);
+}
+
+#de-la-casa .carta:nth-child(1) .img-carta{
+    background-image: url(images/de-la-casa.jpg);
+}
+
+#de-la-casa .carta:nth-child(2) .img-carta{
+    background-image: url(images/cuatro-quesos.jpg);
+}
+
+#de-la-casa .carta:nth-child(3) .img-carta{
+    background-image: url(images/española.jpg);
+}
+
+#de-la-casa .carta:nth-child(4) .img-carta{
+    background-image: url(images/pollo-bbq.jpg);
+}
+
+#calzone .container-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calzone .img-container{
+    text-align: center;
+    background-image: url(images/calzone.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 350px;
+}
+
+footer{
+    background-color: rgb(248, 248, 248);
+}
+
+footer .container{
+    padding-bottom: 10px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p{
+    color: rgb(100, 100, 100);
+}
+
+@media (min-width: 720px){
+
+    .container{
+        width: 80dvw;
+        max-width: 800px;
+    }
+
+    .container-cartas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .carta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        height: 270px;
+    }
+
+    .container-pedidos{
+       align-items: center;
+    }
+
+    #promociones .pedido{
+        text-align: initial;
+        min-width: 500px;
+    }
+
+    #calzone .pedido{
+        text-align: initial;
+        min-width: 500px;
+    }
+
+    #bebidas .pedido{
+        text-align: initial;
+        min-width: 500px;
+    }
+
+}
